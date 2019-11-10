@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class Springboot2MssqlJpaHibernateCrudExamplApplication {
+public class DMGMainApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Springboot2MssqlJpaHibernateCrudExamplApplication.class, args);
+		SpringApplication.run(DMGMainApp.class, args);
 	}
 
 }

@@ -7,5 +7,5 @@ import com.cjy.dmg.model.Project;
 
 @RepositoryRestResource(collectionResourceRel = "project", path = "project")
 public interface ProjectRepository extends JpaRepository <Project, Long> {
-
+ 
 }

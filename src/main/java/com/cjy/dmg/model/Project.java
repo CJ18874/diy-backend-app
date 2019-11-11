@@ -2,19 +2,26 @@ package com.cjy.dmg.model;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Project {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long projectId;
+	@Column(name = "TITLE")
 	private String Title;
+	@Column(name = "DESCRIPTION")
 	private String description;
+	@Column(name = "INSPERATION")
 	private String insperation;
+	@Column(name = "KEYWORD")
 	private String keyWord;
+	@Column(name = "PUBLISHDATE")
 	private Date publishDate;
 	
 	public Long getProjectId() {

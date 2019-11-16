@@ -13,15 +13,10 @@ public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long projectId;
-	@Column(name = "TITLE")
-	private String Title;
-	@Column(name = "DESCRIPTION")
+	private String Title;	
 	private String description;
-	@Column(name = "INSPERATION")
 	private String insperation;
-	@Column(name = "KEYWORD")
 	private String keyWord;
-	@Column(name = "PUBLISHDATE")
 	private Date publishDate;
 	
 	public Long getProjectId() {

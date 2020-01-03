@@ -1,0 +1,487 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.5 (Ubuntu 11.5-3.pgdg16.04+1)
+-- Dumped by pg_dump version 12.0
+
+-- Started on 2019-11-17 21:27:22
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+--
+-- TOC entry 198 (class 1259 OID 24369377)
+-- Name: CATEGORY; Type: TABLE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE TABLE public."CATEGORY" (
+    "CATEGORYID" integer NOT NULL,
+    "NAME" character(50)
+);
+
+
+ALTER TABLE public."CATEGORY" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 199 (class 1259 OID 24369381)
+-- Name: CATEGORY_CATEGORYID_seq; Type: SEQUENCE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE SEQUENCE public."CATEGORY_CATEGORYID_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."CATEGORY_CATEGORYID_seq" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3881 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: CATEGORY_CATEGORYID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER SEQUENCE public."CATEGORY_CATEGORYID_seq" OWNED BY public."CATEGORY"."CATEGORYID";
+
+
+--
+-- TOC entry 202 (class 1259 OID 24369431)
+-- Name: CHAPTER; Type: TABLE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE TABLE public."CHAPTER" (
+);
+
+
+ALTER TABLE public."CHAPTER" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 200 (class 1259 OID 24369396)
+-- Name: MEDIA; Type: TABLE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE TABLE public."MEDIA" (
+    "MEDIAID" integer NOT NULL,
+    "DESCRIPTION" character varying(2000),
+    "URL" character varying(1000),
+    "TYPE" character varying(200),
+    "MAINMEDIA" boolean
+);
+
+
+ALTER TABLE public."MEDIA" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 201 (class 1259 OID 24369399)
+-- Name: MEDIA_MEDIAID_seq; Type: SEQUENCE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE SEQUENCE public."MEDIA_MEDIAID_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."MEDIA_MEDIAID_seq" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3882 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: MEDIA_MEDIAID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER SEQUENCE public."MEDIA_MEDIAID_seq" OWNED BY public."MEDIA"."MEDIAID";
+
+
+--
+-- TOC entry 196 (class 1259 OID 24369305)
+-- Name: PROJECT; Type: TABLE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE TABLE public."PROJECT" (
+    "PROJECTID" integer NOT NULL,
+    "TITLE" character varying(100),
+    "DESCRIPTION" character varying(2000),
+    "INSPERATION" character varying(2000),
+    "KEYWORD" character varying(200),
+    "PUBLISHDATE" date,
+    "CATEGORYID" integer NOT NULL,
+    "OWNERID" integer NOT NULL
+);
+
+
+ALTER TABLE public."PROJECT" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3883 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: COLUMN "PROJECT"."DESCRIPTION"; Type: COMMENT; Schema: public; Owner: luyapohoobttfg
+--
+
+COMMENT ON COLUMN public."PROJECT"."DESCRIPTION" IS 'Description';
+
+
+--
+-- TOC entry 3884 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: COLUMN "PROJECT"."INSPERATION"; Type: COMMENT; Schema: public; Owner: luyapohoobttfg
+--
+
+COMMENT ON COLUMN public."PROJECT"."INSPERATION" IS 'Insperation';
+
+
+--
+-- TOC entry 204 (class 1259 OID 24369667)
+-- Name: PROJECT_CATEGORYID_seq; Type: SEQUENCE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE SEQUENCE public."PROJECT_CATEGORYID_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."PROJECT_CATEGORYID_seq" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3885 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: PROJECT_CATEGORYID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER SEQUENCE public."PROJECT_CATEGORYID_seq" OWNED BY public."PROJECT"."CATEGORYID";
+
+
+--
+-- TOC entry 205 (class 1259 OID 24369686)
+-- Name: PROJECT_OWNERID_seq; Type: SEQUENCE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE SEQUENCE public."PROJECT_OWNERID_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."PROJECT_OWNERID_seq" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3886 (class 0 OID 0)
+-- Dependencies: 205
+-- Name: PROJECT_OWNERID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER SEQUENCE public."PROJECT_OWNERID_seq" OWNED BY public."PROJECT"."OWNERID";
+
+
+--
+-- TOC entry 197 (class 1259 OID 24369340)
+-- Name: PROJECT_PROJECTID_seq; Type: SEQUENCE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE SEQUENCE public."PROJECT_PROJECTID_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."PROJECT_PROJECTID_seq" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3887 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: PROJECT_PROJECTID_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER SEQUENCE public."PROJECT_PROJECTID_seq" OWNED BY public."PROJECT"."PROJECTID";
+
+
+--
+-- TOC entry 203 (class 1259 OID 24369583)
+-- Name: USER; Type: TABLE; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE TABLE public."USER" (
+    "USERNAME" character(100),
+    "EMAIL" character(100),
+    "PHONENUMBER" character(100),
+    "ID" bigint NOT NULL
+);
+
+
+ALTER TABLE public."USER" OWNER TO luyapohoobttfg;
+
+--
+-- TOC entry 3730 (class 2604 OID 24594792)
+-- Name: CATEGORY CATEGORYID; Type: DEFAULT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."CATEGORY" ALTER COLUMN "CATEGORYID" SET DEFAULT nextval('public."CATEGORY_CATEGORYID_seq"'::regclass);
+
+
+--
+-- TOC entry 3731 (class 2604 OID 24594793)
+-- Name: MEDIA MEDIAID; Type: DEFAULT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."MEDIA" ALTER COLUMN "MEDIAID" SET DEFAULT nextval('public."MEDIA_MEDIAID_seq"'::regclass);
+
+
+--
+-- TOC entry 3727 (class 2604 OID 24594794)
+-- Name: PROJECT PROJECTID; Type: DEFAULT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT" ALTER COLUMN "PROJECTID" SET DEFAULT nextval('public."PROJECT_PROJECTID_seq"'::regclass);
+
+
+--
+-- TOC entry 3728 (class 2604 OID 24594795)
+-- Name: PROJECT CATEGORYID; Type: DEFAULT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT" ALTER COLUMN "CATEGORYID" SET DEFAULT nextval('public."PROJECT_CATEGORYID_seq"'::regclass);
+
+
+--
+-- TOC entry 3729 (class 2604 OID 24594796)
+-- Name: PROJECT OWNERID; Type: DEFAULT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT" ALTER COLUMN "OWNERID" SET DEFAULT nextval('public."PROJECT_OWNERID_seq"'::regclass);
+
+
+--
+-- TOC entry 3866 (class 0 OID 24369377)
+-- Dependencies: 198
+-- Data for Name: CATEGORY; Type: TABLE DATA; Schema: public; Owner: luyapohoobttfg
+--
+
+COPY public."CATEGORY" ("CATEGORYID", "NAME") FROM stdin;
+1	string instrument                                 
+2	wind instrument                                   
+4	electronic gear                                   
+3	percussion instrument                             
+\.
+
+
+--
+-- TOC entry 3870 (class 0 OID 24369431)
+-- Dependencies: 202
+-- Data for Name: CHAPTER; Type: TABLE DATA; Schema: public; Owner: luyapohoobttfg
+--
+
+COPY public."CHAPTER"  FROM stdin;
+\.
+
+
+--
+-- TOC entry 3868 (class 0 OID 24369396)
+-- Dependencies: 200
+-- Data for Name: MEDIA; Type: TABLE DATA; Schema: public; Owner: luyapohoobttfg
+--
+
+COPY public."MEDIA" ("MEDIAID", "DESCRIPTION", "URL", "TYPE", "MAINMEDIA") FROM stdin;
+\.
+
+
+--
+-- TOC entry 3864 (class 0 OID 24369305)
+-- Dependencies: 196
+-- Data for Name: PROJECT; Type: TABLE DATA; Schema: public; Owner: luyapohoobttfg
+--
+
+COPY public."PROJECT" ("PROJECTID", "TITLE", "DESCRIPTION", "INSPERATION", "KEYWORD", "PUBLISHDATE", "CATEGORYID", "OWNERID") FROM stdin;
+1	String projetct1	No description	\N	\N	2019-11-16	1	1
+2	String projetct2	No description	\N	\N	2019-11-16	1	2
+3	String projetct3	No description	\N	\N	2019-11-16	1	3
+4	String projetct4	No description	\N	\N	2019-11-16	1	4
+5	Wind projetct1	No description	\N	\N	2019-11-16	2	5
+6	Wind projetct2	No description	\N	\N	2019-11-16	2	6
+\.
+
+
+--
+-- TOC entry 3871 (class 0 OID 24369583)
+-- Dependencies: 203
+-- Data for Name: USER; Type: TABLE DATA; Schema: public; Owner: luyapohoobttfg
+--
+
+COPY public."USER" ("USERNAME", "EMAIL", "PHONENUMBER", "ID") FROM stdin;
+USERNAME_1                                                                                          	\N	\N	1
+USERNAME_2                                                                                          	\N	\N	2
+USERNAME_3                                                                                          	\N	\N	3
+USERNAME_4                                                                                          	\N	\N	4
+USERNAME_5                                                                                          	\N	\N	5
+USERNAME_6                                                                                          	\N	\N	6
+\.
+
+
+--
+-- TOC entry 3888 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: CATEGORY_CATEGORYID_seq; Type: SEQUENCE SET; Schema: public; Owner: luyapohoobttfg
+--
+
+SELECT pg_catalog.setval('public."CATEGORY_CATEGORYID_seq"', 1, false);
+
+
+--
+-- TOC entry 3889 (class 0 OID 0)
+-- Dependencies: 201
+-- Name: MEDIA_MEDIAID_seq; Type: SEQUENCE SET; Schema: public; Owner: luyapohoobttfg
+--
+
+SELECT pg_catalog.setval('public."MEDIA_MEDIAID_seq"', 1, false);
+
+
+--
+-- TOC entry 3890 (class 0 OID 0)
+-- Dependencies: 204
+-- Name: PROJECT_CATEGORYID_seq; Type: SEQUENCE SET; Schema: public; Owner: luyapohoobttfg
+--
+
+SELECT pg_catalog.setval('public."PROJECT_CATEGORYID_seq"', 6, true);
+
+
+--
+-- TOC entry 3891 (class 0 OID 0)
+-- Dependencies: 205
+-- Name: PROJECT_OWNERID_seq; Type: SEQUENCE SET; Schema: public; Owner: luyapohoobttfg
+--
+
+SELECT pg_catalog.setval('public."PROJECT_OWNERID_seq"', 6, true);
+
+
+--
+-- TOC entry 3892 (class 0 OID 0)
+-- Dependencies: 197
+-- Name: PROJECT_PROJECTID_seq; Type: SEQUENCE SET; Schema: public; Owner: luyapohoobttfg
+--
+
+SELECT pg_catalog.setval('public."PROJECT_PROJECTID_seq"', 1, false);
+
+
+--
+-- TOC entry 3737 (class 2606 OID 24369626)
+-- Name: CATEGORY PK_CATEGORY; Type: CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."CATEGORY"
+    ADD CONSTRAINT "PK_CATEGORY" PRIMARY KEY ("CATEGORYID");
+
+
+--
+-- TOC entry 3733 (class 2606 OID 24369655)
+-- Name: PROJECT PK_PROJECT; Type: CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT"
+    ADD CONSTRAINT "PK_PROJECT" PRIMARY KEY ("PROJECTID") INCLUDE ("PROJECTID");
+
+
+--
+-- TOC entry 3739 (class 2606 OID 24369702)
+-- Name: USER PK_USER; Type: CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."USER"
+    ADD CONSTRAINT "PK_USER" PRIMARY KEY ("ID");
+
+
+--
+-- TOC entry 3734 (class 1259 OID 24369708)
+-- Name: fki_FK_CATEGORY_USER; Type: INDEX; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE INDEX "fki_FK_CATEGORY_USER" ON public."PROJECT" USING btree ("OWNERID");
+
+
+--
+-- TOC entry 3735 (class 1259 OID 24369684)
+-- Name: fki_FK_PROJECT_CATEGORY; Type: INDEX; Schema: public; Owner: luyapohoobttfg
+--
+
+CREATE INDEX "fki_FK_PROJECT_CATEGORY" ON public."PROJECT" USING btree ("CATEGORYID");
+
+
+--
+-- TOC entry 3741 (class 2606 OID 24369703)
+-- Name: PROJECT FK_CATEGORY_USER; Type: FK CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT"
+    ADD CONSTRAINT "FK_CATEGORY_USER" FOREIGN KEY ("OWNERID") REFERENCES public."USER"("ID") NOT VALID;
+
+
+--
+-- TOC entry 3742 (class 2606 OID 24369647)
+-- Name: CATEGORY FK_PARENT_CATEGORY; Type: FK CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."CATEGORY"
+    ADD CONSTRAINT "FK_PARENT_CATEGORY" FOREIGN KEY ("CATEGORYID") REFERENCES public."CATEGORY"("CATEGORYID") NOT VALID;
+
+
+--
+-- TOC entry 3740 (class 2606 OID 24369679)
+-- Name: PROJECT FK_PROJECT_CATEGORY; Type: FK CONSTRAINT; Schema: public; Owner: luyapohoobttfg
+--
+
+ALTER TABLE ONLY public."PROJECT"
+    ADD CONSTRAINT "FK_PROJECT_CATEGORY" FOREIGN KEY ("CATEGORYID") REFERENCES public."CATEGORY"("CATEGORYID") NOT VALID;
+
+
+--
+-- TOC entry 3879 (class 0 OID 0)
+-- Dependencies: 3
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: luyapohoobttfg
+--
+
+REVOKE ALL ON SCHEMA public FROM postgres;
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+GRANT ALL ON SCHEMA public TO luyapohoobttfg;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- TOC entry 3880 (class 0 OID 0)
+-- Dependencies: 620
+-- Name: LANGUAGE plpgsql; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON LANGUAGE plpgsql TO luyapohoobttfg;
+
+
+-- Completed on 2019-11-17 21:27:25
+
+--
+-- PostgreSQL database dump complete
+--
+

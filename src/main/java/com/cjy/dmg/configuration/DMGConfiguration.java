@@ -18,6 +18,7 @@ public class DMGConfiguration {
 		dataSource.setUsername("JDBC_DATABASE_USERNAME");
 		dataSource.setPassword("JDBC_DATABASE_PASSWORD");
 		dataSource.setUrl("JDBC_DATABASE_URL");
+		dataSource.setDriverClassName("org.postgresql.Driver");
 		return dataSource;
     }
     

@@ -1,4 +1,5 @@
 HELP.md
+tmp/
 target/
 !**/src/main/**
 !**/src/test/**

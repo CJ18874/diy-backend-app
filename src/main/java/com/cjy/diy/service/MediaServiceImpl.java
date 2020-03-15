@@ -1,4 +1,4 @@
-package com.cjy.dmg.service;
+package com.cjy.diy.service;
 
 import java.lang.reflect.Type;
 import java.util.List;
@@ -11,9 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.cjy.dmg.model.Media;
-import com.cjy.dmg.model.dto.MediaDto;
-import com.cjy.dmg.repository.MediaRepository;
+import com.cjy.diy.model.Media;
+import com.cjy.diy.model.dto.MediaDto;
+import com.cjy.diy.repository.MediaRepository;
 
 @Service
 public class MediaServiceImpl implements MediaService{

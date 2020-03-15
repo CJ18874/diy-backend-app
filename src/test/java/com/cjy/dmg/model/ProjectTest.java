@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.ModelMapper;
 
-import com.cjy.dmg.model.dto.ProjectDto;
+import com.cjy.diy.model.Project;
+import com.cjy.diy.model.dto.ProjectDto;
 
 public class ProjectTest {
 	private static final ModelMapper modelMapper = new ModelMapper();

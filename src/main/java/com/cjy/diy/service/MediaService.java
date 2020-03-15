@@ -1,8 +1,8 @@
-package com.cjy.dmg.service;
+package com.cjy.diy.service;
 
 import java.util.List;
 
-import com.cjy.dmg.model.dto.MediaDto;
+import com.cjy.diy.model.dto.MediaDto;
 
 public interface MediaService {
 	public abstract List<MediaDto> findByProjectId(int projectId);

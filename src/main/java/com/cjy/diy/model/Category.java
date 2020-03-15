@@ -1,4 +1,4 @@
-package com.cjy.dmg.model;
+package com.cjy.diy.model;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

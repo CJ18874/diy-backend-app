@@ -1,4 +1,4 @@
-package com.cjy.dmg.controller;
+package com.cjy.diy.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cjy.dmg.model.Project;
-import com.cjy.dmg.model.dto.ProjectDto;
-import com.cjy.dmg.service.ProjectServiceImpl;
+import com.cjy.diy.model.Project;
+import com.cjy.diy.model.dto.ProjectDto;
+import com.cjy.diy.service.ProjectServiceImpl;
 
 @RestController
 @RequestMapping("/api/project")

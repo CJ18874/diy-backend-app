@@ -1,4 +1,4 @@
-package com.cjy.dmg.service;
+package com.cjy.diy.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
-import com.cjy.dmg.model.Category;
-import com.cjy.dmg.model.Project;
-import com.cjy.dmg.model.dto.ProjectDto;
-import com.cjy.dmg.repository.ProjectRepository;
+import com.cjy.diy.model.Category;
+import com.cjy.diy.model.Project;
+import com.cjy.diy.model.dto.ProjectDto;
+import com.cjy.diy.repository.ProjectRepository;
 
 @Service
 public class ProjectServiceImpl implements ProjectService {

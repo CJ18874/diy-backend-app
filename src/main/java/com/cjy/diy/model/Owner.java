@@ -1,4 +1,4 @@
-package com.cjy.dmg.model;
+package com.cjy.diy.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

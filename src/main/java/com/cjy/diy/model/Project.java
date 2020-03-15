@@ -1,4 +1,4 @@
-package com.cjy.dmg.model;
+package com.cjy.diy.model;
 
 import java.sql.Date;
 import java.util.List;

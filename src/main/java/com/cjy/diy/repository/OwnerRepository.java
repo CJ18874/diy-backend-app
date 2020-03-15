@@ -1,9 +1,9 @@
-package com.cjy.dmg.repository;
+package com.cjy.diy.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cjy.dmg.model.Owner;
+import com.cjy.diy.model.Owner;
 
 @Repository
 public interface OwnerRepository extends JpaRepository <Owner, Integer>{

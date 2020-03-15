@@ -1,9 +1,9 @@
-package com.cjy.dmg.model.dto;
+package com.cjy.diy.model.dto;
 
 import java.sql.Date;
 import java.util.List;
 
-import com.cjy.dmg.model.Media;
+import com.cjy.diy.model.Media;
 
 public class ProjectDto {
 	private int id;

@@ -1,4 +1,4 @@
-package com.cjy.dmg.model.dto;
+package com.cjy.diy.model.dto;
 
 public class MediaDto {
 	private String url;

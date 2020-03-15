@@ -1,4 +1,4 @@
-package com.cjy.dmg.configuration;
+package com.cjy.diy.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.cjy.dmg.controller;
+package com.cjy.diy.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cjy.dmg.model.dto.MediaDto;
-import com.cjy.dmg.service.MediaServiceImpl;
+import com.cjy.diy.model.dto.MediaDto;
+import com.cjy.diy.service.MediaServiceImpl;
 
 @RestController
 @RequestMapping("/api/media")

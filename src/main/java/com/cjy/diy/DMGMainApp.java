@@ -1,4 +1,4 @@
-package com.cjy.dmg;
+package com.cjy.diy;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -12,14 +12,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.cjy.dmg.model.Category;
-import com.cjy.dmg.model.Media;
-import com.cjy.dmg.model.Owner;
-import com.cjy.dmg.model.Project;
-import com.cjy.dmg.repository.CategoryRepository;
-import com.cjy.dmg.repository.MediaRepository;
-import com.cjy.dmg.repository.OwnerRepository;
-import com.cjy.dmg.repository.ProjectRepository;
+import com.cjy.diy.model.Category;
+import com.cjy.diy.model.Media;
+import com.cjy.diy.model.Owner;
+import com.cjy.diy.model.Project;
+import com.cjy.diy.repository.CategoryRepository;
+import com.cjy.diy.repository.MediaRepository;
+import com.cjy.diy.repository.OwnerRepository;
+import com.cjy.diy.repository.ProjectRepository;
 
 @SpringBootApplication
 public class DMGMainApp implements CommandLineRunner {

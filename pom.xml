@@ -57,7 +57,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>dmg-backend-app</finalName>
+		<finalName>diy-backend-app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

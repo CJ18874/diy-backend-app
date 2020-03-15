@@ -9,10 +9,10 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.cjy.dmg</groupId>
-	<artifactId>dmg-backend-app</artifactId>
+	<groupId>com.cjy.diy</groupId>
+	<artifactId>diy-backend-app</artifactId>
 	<version>0.0.1</version>
-	<name>dmg-backend-app</name>
+	<name>diy-backend-app</name>
 	<description>Backend Application for the website diy-music-gear</description>
 
 	<properties>

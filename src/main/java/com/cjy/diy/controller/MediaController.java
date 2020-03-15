@@ -27,7 +27,6 @@ public class MediaController {
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<?> findByProjectId(@RequestParam(name = "projectId", required = true) String projectId) {
 		logger.info("** start findByProjectId **");
-		logger.info("projectId "+projectId);
 		
 		Optional<List<MediaDto>> project = Optional.ofNullable(service.findByProjectId(Integer.valueOf(projectId)));
 		return project.map(response -> ResponseEntity.ok().body(response))

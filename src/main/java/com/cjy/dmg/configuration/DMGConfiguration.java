@@ -12,15 +12,15 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @Configuration
 public class DMGConfiguration {
 
-    @Bean
-    public DataSource dataSource() throws URISyntaxException {
-    	DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setUsername("JDBC_DATABASE_USERNAME");
-		dataSource.setPassword("JDBC_DATABASE_PASSWORD");
-		dataSource.setUrl("JDBC_DATABASE_URL");
-		dataSource.setDriverClassName("org.postgresql.Driver");
-		return dataSource;
-    }
+//    @Bean
+//    public DataSource dataSource() throws URISyntaxException {
+//    	DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//		dataSource.setUsername("JDBC_DATABASE_USERNAME");
+//		dataSource.setPassword("JDBC_DATABASE_PASSWORD");
+//		dataSource.setUrl("JDBC_DATABASE_URL");
+//		dataSource.setDriverClassName("org.postgresql.Driver");
+//		return dataSource;
+//    }
     
 	@Bean
 	public ModelMapper modelMapper() {

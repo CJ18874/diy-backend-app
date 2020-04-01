@@ -1,6 +1,7 @@
 HELP.md
 tmp/
 target/
+src/main/resources/application.properties
 !**/src/main/**
 
 ### STS ###
@@ -17,5 +18,4 @@ mvnw
 mvnw.cmd
 
 doc/
-src/main/resources/application.properties
 src/main/resources/application-prod.properties

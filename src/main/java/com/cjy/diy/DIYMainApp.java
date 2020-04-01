@@ -22,15 +22,15 @@ import com.cjy.diy.repository.OwnerRepository;
 import com.cjy.diy.repository.ProjectRepository;
 
 @SpringBootApplication
-public class DMGMainApp implements CommandLineRunner {
+public class DIYMainApp implements CommandLineRunner {
 
-	private static final Logger logger = LoggerFactory.getLogger(DMGMainApp.class);
+	private static final Logger logger = LoggerFactory.getLogger(DIYMainApp.class);
 
 	@Value("${spring.profiles.active}")
 	private String activeProfile;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DMGMainApp.class, args);
+		SpringApplication.run(DIYMainApp.class, args);
 	}
 
 	@Autowired

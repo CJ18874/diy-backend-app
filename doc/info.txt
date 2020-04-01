@@ -4,5 +4,15 @@ Visit the app’s URL by running this command: heroku open
 View the logs for the application: heroku logs --tail
 List the configuration database variables: heroku config (heroku pg)
 
-
 -------------------------------------------------------------------------------------------
+
+https://diy-backend-app.herokuapp.com/api/project?categoryId=1
+-------------------------------------------------------------------------------------------
+Host:ec2-23-22-156-110.compute-1.amazonaws.com
+Database: dfr2ef726igcqd
+User: ivsjekqqegqqvr
+Port: 5432
+Password: ef0073d74821afde94051ea9fef24da6a811bcfdae791ba166716d692241b6b9
+URI: postgres://ivsjekqqegqqvr:ef0073d74821afde94051ea9fef24da6a811bcfdae791ba166716d692241b6b9@ec2-23-22-156-110.compute-1.amazonaws.com:5432/dfr2ef726igcqd
+Heroku CLI
+heroku pg:psql postgresql-rectangular-82960 --app diy-backend-app

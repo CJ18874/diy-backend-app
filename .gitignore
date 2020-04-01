@@ -1,6 +1,7 @@
 HELP.md
 tmp/
 target/
+!**/src/main/**
 
 ### STS ###
 .apt_generated

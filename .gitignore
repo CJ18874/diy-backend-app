@@ -3,7 +3,6 @@ tmp/
 target/
 !**/src/main/**
 !**/src/test/**
-src/main/resources/application.properties
 
 ### STS ###
 .apt_generated
@@ -19,3 +18,4 @@ mvnw
 mvnw.cmd
 
 doc/
+src/main/resources/application.properties

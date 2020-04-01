@@ -1,8 +1,6 @@
 HELP.md
 tmp/
 target/
-!**/src/main/**
-!**/src/test/**
 
 ### STS ###
 .apt_generated
@@ -18,5 +16,5 @@ mvnw
 mvnw.cmd
 
 doc/
-\!application.properties
+application.properties
 src/main/resources/application-prod.properties

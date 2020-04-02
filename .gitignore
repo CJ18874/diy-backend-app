@@ -1,6 +1,9 @@
 HELP.md
 tmp/
 target/
+
+# A double asterisk matches zero or more directories.
+
 !**/src/main/**
 !**/src/test/**
 
@@ -16,6 +19,3 @@ target/
 
 mvnw
 mvnw.cmd
-
-doc/
-src/main/resources/application.properties
